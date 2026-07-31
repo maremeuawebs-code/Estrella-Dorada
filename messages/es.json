@@ -1,0 +1,20 @@
+{
+  "Hero": {
+    "title": "PREMIOS ESTRELLA DORADA",
+    "subtitle": "La máxima distinción del Eje Cafetero",
+    "cta": "Descubrir la Experiencia"
+  },
+  "About": {
+    "title": "EL EVENTO",
+    "description": "Una noche dedicada a premiar la excelencia y la pasión de la industria gastronómica y de entretenimiento."
+  },
+  "Categories": {
+    "title": "CATEGORÍAS"
+  },
+  "Timeline": {
+    "title": "AGENDA DE LA GALA"
+  },
+  "FAQ": {
+    "title": "PREGUNTAS FRECUENTES"
+  }
+}

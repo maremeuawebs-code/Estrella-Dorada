@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Estrella Dorada – Plataforma de Premiación
 
-## Getting Started
+## Estado: Planeación
+**Objetivo general:** Desarrollar una plataforma web premium para el evento **Estrella Dorada**, diseñada para permanecer durante múltiples ediciones anuales, donde únicamente cambie el contenido y el material audiovisual sin modificar la arquitectura de la aplicación.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## REGLAS DEL PROYECTO
+Estas reglas no podrán romperse durante el desarrollo.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **No se improvisa:** Si falta información, se deja documentada como pendiente. Nunca se inventará contenido.
+2. **Justificación técnica:** Toda decisión técnica deberá estar justificada. No se implementarán librerías, componentes o dependencias sin una razón específica.
+3. **Reutilización:** Toda funcionalidad deberá ser reutilizable. No se desarrollarán componentes exclusivos para una edición del evento.
+4. **Escalabilidad:** La aplicación deberá permitir crear futuras ediciones cambiando únicamente el contenido.
+5. **Rendimiento:** El rendimiento tiene prioridad. No se aceptarán animaciones que degraden significativamente la experiencia en dispositivos móviles.
+6. **Documentación:** Todo cambio importante deberá quedar documentado antes de implementarse.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## FILOSOFÍA DEL PROYECTO
+* No estamos desarrollando una página web; estamos desarrollando una experiencia digital.
+* El protagonista del sitio es el premio (trofeo).
+* Todo el recorrido del usuario gira alrededor del trofeo.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## FASES DEL PROYECTO
+El desarrollo se estructurará rigurosamente en las siguientes fases consecutivas:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **FASE 1: Investigación** (Definir arquitectura, mapa de navegación, identidad visual, moodboard, referencias, paleta de colores, tipografía, animaciones, estructura de contenidos y alcance técnico).
+* **FASE 2: Arquitectura** (Definir estructura de carpetas, componentes, rutas, internacionalización, estrategia SEO, responsive, contenidos, multimedia y estrategia de futuras ediciones).
+* **FASE 3: Diseño UX** (Wireframes, distribución, navegación, comportamiento responsive y flujo de usuario).
+* **FASE 4: Diseño UI** (Design System: colores, espaciados, componentes, botones, tarjetas, grids, iconografía, estados, formularios).
+* **FASE 5: Dirección de Animaciones** (Comportamiento del scroll, timing, easing, transiciones, aparición de elementos, efectos de fondo, comportamiento del premio).
+* **FASE 6: Sistema del Premio 3D** (Modelo 3D unificado que reacciona al scroll: escala, posición, rotación, iluminación, materiales, reflejos, trayectoria por sección en escritorio y móvil).
+* **FASE 7: Desarrollo Frontend** (Implementación sin improvisaciones basada en la documentación).
+* **FASE 8: Gestión del Contenido** (Información independiente del código).
+* **FASE 9: Optimización** (Rendimiento, SEO, accesibilidad, responsive, carga diferida, animaciones, consumo de memoria y bundle).
+* **FASE 10: QA** (Verificación técnica y funcional de cada componente).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## DOCUMENTACIÓN OBLIGATORIA DE MÓDULOS
+Antes de desarrollar cualquier módulo, se requiere un documento específico con:
+* Objetivo
+* Alcance
+* Entradas y Salidas
+* Restricciones y Dependencias
+* Comportamiento esperado (general y responsive)
+* Criterios de aceptación
