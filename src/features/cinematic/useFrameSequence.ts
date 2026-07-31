@@ -9,6 +9,7 @@ export const useFrameSequence = () => {
 
   useEffect(() => {
     let isMounted = true;
+    const hookMountTime = performance.now();
     
     const preloadSequence = async () => {
       const s1Count = 96;
@@ -16,77 +17,86 @@ export const useFrameSequence = () => {
       const totalToLoad = s1Count + s2Count;
       let loadedCount = 0;
 
-      const s1List: HTMLImageElement[] = [];
-      const s2List: HTMLImageElement[] = [];
+      const s1List = new Array(s1Count).fill(null) as HTMLImageElement[];
+      const s2List = new Array(s2Count).fill(null) as HTMLImageElement[];
 
-      // 1. Prioritized Load: Load first 20 frames of Scene 1 to display immediately
-      const initialBatch = 20;
-      for (let i = 1; i <= initialBatch; i++) {
-        const img = new Image();
-        img.src = `/cinematic/desktop/scene-01/frame_${i.toString().padStart(4, '0')}.webp`;
-        await new Promise((resolve) => {
-          img.onload = resolve;
-          img.onerror = resolve;
-        });
-        s1List.push(img);
-        loadedCount++;
-        if (isMounted) {
-          setScene1Frames([...s1List]);
-          setLoadingProgress(loadedCount / totalToLoad);
-        }
-      }
-
-      // 2. Background Load: Load remaining frames of Scene 1
-      const loadRemainingScene1 = async () => {
-        for (let i = initialBatch + 1; i <= s1Count; i++) {
+      const loadBatch = async (
+        scene: 'scene-01' | 'scene-02',
+        startIdx: number,
+        endIdx: number,
+        targetList: HTMLImageElement[],
+        onBatchComplete: () => void
+      ) => {
+        const BATCH_SIZE = 24;
+        for (let i = startIdx; i <= endIdx; i += BATCH_SIZE) {
           if (!isMounted) return;
-          const img = new Image();
-          img.src = `/cinematic/desktop/scene-01/frame_${i.toString().padStart(4, '0')}.webp`;
-          await new Promise((resolve) => {
-            img.onload = resolve;
-            img.onerror = resolve;
-          });
-          s1List.push(img);
-          loadedCount++;
-          if (isMounted && i % 10 === 0) {
-            setScene1Frames([...s1List]);
-            setLoadingProgress(loadedCount / totalToLoad);
+          const chunkEnd = Math.min(i + BATCH_SIZE - 1, endIdx);
+          const promises: Promise<void>[] = [];
+          
+          for (let j = i; j <= chunkEnd; j++) {
+            const img = new Image();
+            img.src = `/cinematic/desktop/${scene}/frame_${j.toString().padStart(4, '0')}.webp`;
+            promises.push(new Promise<void>((resolve) => {
+              img.onload = () => resolve();
+              img.onerror = () => resolve();
+            }).then(() => {
+              targetList[j - 1] = img;
+              loadedCount++;
+            }));
           }
-        }
-        if (isMounted) {
-          setScene1Frames([...s1List]);
+          await Promise.all(promises);
+          if (isMounted) onBatchComplete();
         }
       };
 
-      // 3. Background Load: Load all frames of Scene 2
-      const loadScene2 = async () => {
-        for (let i = 1; i <= s2Count; i++) {
-          if (!isMounted) return;
-          const img = new Image();
-          img.src = `/cinematic/desktop/scene-02/frame_${i.toString().padStart(4, '0')}.webp`;
-          await new Promise((resolve) => {
-            img.onload = resolve;
-            img.onerror = resolve;
-          });
-          s2List.push(img);
-          loadedCount++;
-          if (isMounted && i % 10 === 0) {
-            setScene2Frames([...s2List]);
-            setLoadingProgress(loadedCount / totalToLoad);
-          }
-        }
-        if (isMounted) {
-          setScene2Frames([...s2List]);
-        }
-      };
+      // 1. Prioritized Load: First 24 frames of Scene 1
+      const initialBatch = 24;
+      await loadBatch('scene-01', 1, initialBatch, s1List, () => {
+        setScene1Frames([...s1List]);
+        setLoadingProgress(loadedCount / totalToLoad);
+      });
 
-      // Run sequentially to prioritize Scene 1
-      await loadRemainingScene1();
-      await loadScene2();
+      const t1 = performance.now();
 
+      // INITIAL LOAD COMPLETE - Release the UI immediately!
       if (isMounted) {
         setIsLoaded(true);
+        // Force progress to 1 so the loading screen fades out gracefully
         setLoadingProgress(1);
+        
+        setTimeout(() => {
+          const navEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+          const paintEntries = performance.getEntriesByType('paint');
+          const fp = paintEntries.find(p => p.name === 'first-paint');
+          const fcp = paintEntries.find(p => p.name === 'first-contentful-paint');
+
+          console.group('%c🚀 PERFORMANCE METRICS (FAST BOOT)', 'color: #00ff00; font-weight: bold; font-size: 14px;');
+          console.log(`Initial HTML: ${navEntry ? Math.round(navEntry.responseEnd) : 'N/A'} ms`);
+          console.log(`First Paint: ${fp ? Math.round(fp.startTime) : 'N/A'} ms`);
+          console.log(`First Contentful Paint: ${fcp ? Math.round(fcp.startTime) : 'N/A'} ms`);
+          console.log(`Time until loading screen disappears: ${Math.round(t1 - hookMountTime)} ms`);
+          console.log(`Time until Scene 1 becomes interactive: ${Math.round(t1 - hookMountTime)} ms`);
+          console.groupEnd();
+        }, 100);
+      }
+
+      // 2. Background Load: Remaining Scene 1
+      await loadBatch('scene-01', initialBatch + 1, s1Count, s1List, () => {
+        setScene1Frames([...s1List]);
+      });
+
+      // 3. Background Load: Scene 2
+      await loadBatch('scene-02', 1, s2Count, s2List, () => {
+        setScene2Frames([...s2List]);
+      });
+
+      const t2 = performance.now();
+      
+      if (isMounted) {
+        console.group('%c✅ BACKGROUND PRELOADING COMPLETE', 'color: #00bfff; font-weight: bold; font-size: 12px;');
+        console.log(`Time until Scene 2 finishes background loading: ${Math.round(t2 - t1)} ms`);
+        console.log(`Total loading time: ${Math.round(t2 - hookMountTime)} ms`);
+        console.groupEnd();
       }
     };
 
