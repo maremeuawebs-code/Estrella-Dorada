@@ -15,11 +15,19 @@ export const CinematicSequence = () => {
   
   const cooldownRef = useRef(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const touchStartY = useRef<number | null>(null);
   const isDev = process.env.NODE_ENV === 'development';
   const SHOW_DEBUG = false;
 
-  // Manage body scroll lock based on cinematic sequence viewport state
+  // Detect touch/mobile device
+  const isMobile = useRef(false);
   useEffect(() => {
+    isMobile.current = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  }, []);
+
+  // Manage body scroll lock — only on non-touch devices
+  useEffect(() => {
+    if (isMobile.current) return; // never lock on mobile
     if (currentViewport !== 'landing') {
       document.body.style.overflow = 'hidden';
     } else {
@@ -146,9 +154,88 @@ export const CinematicSequence = () => {
       }
     };
 
+    // Only add wheel listener on non-touch devices
+    if (isMobile.current) return;
     window.addEventListener('wheel', handleWheel, { passive: false });
     return () => {
       window.removeEventListener('wheel', handleWheel);
+    };
+  }, [currentViewport, isPlaying, playSequence]);
+
+  // Touch swipe handler for mobile cinematic navigation
+  useEffect(() => {
+    if (!isMobile.current) return;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      if (currentViewport === 'landing') return;
+      touchStartY.current = e.touches[0].clientY;
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (currentViewport === 'landing') return;
+      if (touchStartY.current === null) return;
+      if (isPlaying || cooldownRef.current) return;
+
+      const deltaY = touchStartY.current - e.changedTouches[0].clientY;
+      touchStartY.current = null;
+
+      // Require a minimum swipe distance of 40px
+      if (Math.abs(deltaY) < 40) return;
+
+      if (deltaY > 0) {
+        // Swipe Up = Scroll Down
+        if (currentViewport === 1) {
+          setCurrentViewport(2);
+          playSequence('scene1', 'forward', () => {
+            setActiveSequence('scene1');
+            setFrameIndex(103);
+            setAnimProgress(0);
+          });
+        } else if (currentViewport === 2) {
+          setCurrentViewport(3);
+          playSequence('scene2', 'forward', () => {
+            setActiveSequence('scene2');
+            setFrameIndex(87);
+            setAnimProgress(0);
+          });
+        } else if (currentViewport === 3) {
+          setCurrentViewport('landing');
+        }
+      } else {
+        // Swipe Down = Scroll Up
+        if (currentViewport === 2) {
+          setCurrentViewport(1);
+          playSequence('scene1', 'reverse', () => {
+            setActiveSequence('scene1');
+            setFrameIndex(0);
+            setAnimProgress(0);
+          });
+        } else if (currentViewport === 3) {
+          setCurrentViewport(2);
+          playSequence('scene2', 'reverse', () => {
+            setActiveSequence('scene1');
+            setFrameIndex(103);
+            setAnimProgress(0);
+          });
+        }
+      }
+    };
+
+    // Prevent default touch scroll only while inside cinematic (not landing)
+    const handleTouchMove = (e: TouchEvent) => {
+      if (currentViewport !== 'landing') {
+        e.preventDefault();
+      }
+    };
+
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchend', handleTouchEnd);
+      window.removeEventListener('touchmove', handleTouchMove);
     };
   }, [currentViewport, isPlaying, playSequence]);
 
