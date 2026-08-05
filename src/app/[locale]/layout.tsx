@@ -38,11 +38,31 @@ export default async function LocaleLayout({
 
   const jsonLdData = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Estrella Dorada',
-    url: 'https://estrelladorada.com',
-    logo: 'https://estrelladorada.com/favicon.svg',
-    description: 'Plataforma premium de premiación para Estrella Dorada (Asobares Quindío).'
+    '@type': 'Event',
+    name: 'Premios Estrella Dorada 2026',
+    url: 'https://estrelladorada.asobares.org',
+    image: 'https://estrelladorada.asobares.org/images/ESTRELLA DORADA LOGO.png',
+    description: 'La distinción más prestigiosa de la industria del entretenimiento nocturno y gastronómico del Eje Cafetero.',
+    startDate: '2026-09-24T19:00:00-05:00',
+    endDate: '2026-09-24T22:00:00-05:00',
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    location: {
+      '@type': 'Place',
+      name: 'Fonda La Floresta',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Cra. 6 #29',
+        addressLocality: 'Armenia',
+        addressRegion: 'Quindío',
+        addressCountry: 'CO'
+      }
+    },
+    organizer: {
+      '@type': 'Organization',
+      name: 'Asobares Quindío',
+      email: 'asobaresquindio@asobares.org'
+    }
   };
 
   return (

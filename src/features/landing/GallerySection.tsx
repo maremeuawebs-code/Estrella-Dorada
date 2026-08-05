@@ -2,15 +2,17 @@ import React from 'react';
 import { Container } from '@/components/ui/Container';
 import { SectionTitle } from '@/components/ui/SectionTitle';
 import { galleryImages } from '@/data/gallery';
+import { useTranslations } from 'next-intl';
 
 export const GallerySection = () => {
+  const t = useTranslations('Gallery');
   return (
     <section id="gallery" className="py-32 bg-black relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.03)_0%,transparent_60%)]" />
       <Container className="relative z-10">
-        <SectionTitle title="Momentos Estelares" subtitle="Memorias de la Gala" />
+        <SectionTitle title={t('title')} subtitle={t('subtitle')} />
         <p className="text-neutral-400 text-center max-w-xl mx-auto mb-16 -mt-8">
-          Una retrospectiva visual del glamur, la pasión y los hitos que definen nuestro certamen.
+          {t('description')}
         </p>
 
         {/* Editorial Grid */}
@@ -23,7 +25,7 @@ export const GallerySection = () => {
               {/* Background Image with Ken Burns effect */}
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-[1.5s] ease-out group-hover:scale-105" 
-                style={{ backgroundImage: `url(${img.url})` }} 
+                style={{ backgroundImage: `url(${img.src})` }} 
               />
               
               {/* Dark Overlay Gradient */}
@@ -35,7 +37,7 @@ export const GallerySection = () => {
                   Gala Oficial
                 </span>
                 <h3 className="text-white text-lg font-bold font-outfit tracking-wide">
-                  {img.title}
+                  {t(`items.${img.key}`)}
                 </h3>
               </div>
 

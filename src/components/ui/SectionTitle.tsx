@@ -1,10 +1,10 @@
 import React from 'react';
-export const SectionTitle = ({ title, subtitle }: { title: string, subtitle?: string }) => {
+export const SectionTitle = ({ title, subtitle, centered = false }: { title: string, subtitle?: string, centered?: boolean }) => {
   return (
-    <div className="mb-12 text-center">
+    <div className={`mb-12 ${centered ? 'text-center' : ''}`}>
+      {subtitle && <span className="text-[#d4af37] text-xs uppercase tracking-[0.2em] font-bold mb-3 block">{subtitle}</span>}
       <h2 className="text-4xl font-bold font-outfit text-white mb-4">{title}</h2>
-      {subtitle && <p className="text-gold-500 uppercase tracking-widest text-sm">{subtitle}</p>}
-      <div className="w-24 h-1 bg-gradient-to-r from-gold-600 to-transparent mx-auto mt-6"></div>
+      <div className={`w-24 h-1 bg-gradient-to-r from-[#d4af37] to-transparent mt-4 ${centered ? 'mx-auto' : ''}`}></div>
     </div>
   );
 };

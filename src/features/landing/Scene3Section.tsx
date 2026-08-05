@@ -1,8 +1,10 @@
 'use client';
 import React, { useRef, useEffect } from 'react';
 import { Container } from '@/components/ui/Container';
+import { useTranslations } from 'next-intl';
 
 export const Scene3Section = () => {
+  const t = useTranslations('Scene3');
   const starRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -34,37 +36,30 @@ export const Scene3Section = () => {
       <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left: Content */}
         <div>
-          <div className="inline-flex items-center gap-3 mb-6">
-            <span className="text-[#d4af37] text-xs uppercase tracking-[0.3em]">El Símbolo</span>
-            <div className="w-12 h-px bg-[#d4af37]/40" />
-          </div>
 
           <h2 className="text-5xl xl:text-7xl font-bold font-outfit leading-[0.95] mb-6">
-            <span className="block text-white">EL</span>
-            <span className="block gold-shimmer">GALARDÓN</span>
+            <span className="block text-white">{t('title1')}</span>
+            <span className="block gold-shimmer">{t('title2')}</span>
           </h2>
 
           <div className="w-16 h-0.5 bg-gradient-to-r from-[#d4af37] to-transparent mb-8" />
 
           <p className="text-neutral-300 text-xl leading-relaxed mb-6 max-w-sm">
-            Más que un trofeo. Es el testimonio tangible de años de dedicación, 
-            innovación y amor por la hospitalidad.
+            {t('description1')}
           </p>
           <p className="text-neutral-500 leading-relaxed mb-10 max-w-sm">
-            Cada faceta dorada refleja la luz de cientos de noches perfectas, 
-            de clientes satisfechos, de equipos que dieron todo. Es el símbolo 
-            definitivo del prestigio en el Eje Cafetero.
+            {t('description2')}
           </p>
 
           <div className="flex gap-6">
             {[
-              { label: 'Material', value: 'Fundición Premium' },
-              { label: 'Peso', value: '2.4 kg' },
-              { label: 'Altura', value: '38 cm' },
+              { key: 'organizer' },
+              { key: 'venue' },
+              { key: 'date' },
             ].map(spec => (
-              <div key={spec.label} className="border-t border-[#d4af37]/20 pt-4">
-                <div className="text-[#d4af37] font-bold text-sm font-outfit">{spec.value}</div>
-                <div className="text-neutral-600 text-xs uppercase tracking-wider mt-1">{spec.label}</div>
+              <div key={spec.key} className="border-t border-[#d4af37]/20 pt-4">
+                <div className="text-[#d4af37] font-bold text-sm font-outfit">{t(`specs.${spec.key}.value`)}</div>
+                <div className="text-neutral-600 text-xs uppercase tracking-wider mt-1">{t(`specs.${spec.key}.label`)}</div>
               </div>
             ))}
           </div>
@@ -128,7 +123,7 @@ export const Scene3Section = () => {
 
           {/* Bottom label */}
           <div className="absolute bottom-8 text-center">
-            <div className="text-[#d4af37] text-xs uppercase tracking-[0.5em] opacity-60">Premios Estrella Dorada</div>
+            <div className="text-[#d4af37] text-xs uppercase tracking-[0.5em] opacity-60">{t('bottomLabel')}</div>
           </div>
         </div>
       </Container>

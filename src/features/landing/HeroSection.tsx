@@ -1,8 +1,10 @@
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
 import { Container } from '@/components/ui/Container';
+import { useTranslations } from 'next-intl';
 
 export const HeroSection = () => {
+  const t = useTranslations('Hero');
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,51 +44,31 @@ export const HeroSection = () => {
       <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center pt-24 pb-16">
         {/* Left: Content */}
         <div>
-          <div className="inline-flex items-center gap-3 mb-8 px-4 py-2 border border-[#d4af37]/30 rounded-full bg-[#d4af37]/5">
-            <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-pulse" />
-            <span className="text-[#d4af37] text-xs uppercase tracking-[0.3em] font-medium">
-              Asobares Quindío · 2026
-            </span>
-          </div>
-
           <h1 className="text-6xl xl:text-8xl font-bold leading-[0.9] mb-6 font-outfit">
-            <span className="block text-white">PREMIOS</span>
-            <span className="block gold-shimmer">ESTRELLA</span>
-            <span className="block text-white">DORADA</span>
+            <span className="block text-white">{t('title1')}</span>
+            <span className="block gold-shimmer">{t('title2')}</span>
+            <span className="block text-white">{t('title3')}</span>
           </h1>
 
-          <p className="text-neutral-400 text-lg leading-relaxed mb-10 max-w-md">
-            La distinción más prestigiosa de la industria del entretenimiento, 
-            la gastronomía y la vida nocturna en el Eje Cafetero de Colombia.
+          <p className="text-xl md:text-2xl text-neutral-300 max-w-xl leading-relaxed mb-10 border-l-2 border-[#d4af37]/50 pl-6">
+            {t('subtitle')}
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="#nominations"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#d4af37] text-black font-bold rounded-full hover:bg-[#f0d060] transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] text-sm uppercase tracking-wider"
-            >
-              Postularse Ahora
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </a>
-            <a
-              href="#categories"
-              className="inline-flex items-center gap-2 px-8 py-4 border border-[#d4af37]/40 text-[#d4af37] font-medium rounded-full hover:bg-[#d4af37]/10 transition-all duration-300 text-sm uppercase tracking-wider"
-            >
-              Ver Categorías
+          <div className="flex flex-col sm:flex-row gap-5">
+            <a href="#categories" className="px-8 py-4 bg-[#d4af37] text-black font-bold uppercase tracking-widest text-sm rounded-full hover:bg-[#f0d060] hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all duration-300 text-center">
+              {t('cta')}
             </a>
           </div>
 
-          {/* Stats row */}
-          <div className="flex gap-8 mt-14 pt-8 border-t border-white/5">
+          {/* Info bar */}
+          <div className="flex flex-wrap gap-8 mt-14 pt-8 border-t border-white/5">
             {[
-              { num: '12+', label: 'Categorías' },
-              { num: '200+', label: 'Nominados' },
-              { num: '3ª', label: 'Edición' },
+              { num: '24 Sep 2026', label: 'Fecha' },
+              { num: 'Fonda La Floresta', label: 'Lugar' },
+              { num: 'Armenia, Quindío', label: 'Ciudad' },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-2xl font-bold text-[#d4af37] font-outfit">{stat.num}</div>
+                <div className="text-xl font-bold text-[#d4af37] font-outfit">{stat.num}</div>
                 <div className="text-xs text-neutral-500 uppercase tracking-wider mt-1">{stat.label}</div>
               </div>
             ))}

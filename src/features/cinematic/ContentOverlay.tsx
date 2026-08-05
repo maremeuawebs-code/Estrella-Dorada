@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Container } from '@/components/ui/Container';
+import { useTranslations } from 'next-intl';
 
 interface ContentOverlayProps {
   currentViewport: 1 | 2 | 3 | 'landing';
@@ -8,6 +9,9 @@ interface ContentOverlayProps {
 }
 
 export const ContentOverlay = ({ currentViewport, onExitCinematic }: ContentOverlayProps) => {
+  const tScene2 = useTranslations('Scene2');
+  const tScene3 = useTranslations('Scene3');
+  
   const isV1 = currentViewport === 1;
   const isV2 = currentViewport === 2;
   const isV3 = currentViewport === 3;
@@ -65,16 +69,9 @@ export const ContentOverlay = ({ currentViewport, onExitCinematic }: ContentOver
                 
                 <div className="flex flex-wrap gap-4 pt-2">
                   <a
-                    href="#nominations"
-                    onClick={handleAnchorClick}
-                    className="inline-flex items-center justify-center px-6 py-3.5 bg-[#d4af37] text-black font-bold rounded-full hover:bg-[#f0d060] transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] text-xs uppercase tracking-wider"
-                  >
-                    Postularse Ahora
-                  </a>
-                  <a
                     href="#categories"
                     onClick={handleAnchorClick}
-                    className="inline-flex items-center justify-center px-6 py-3.5 border border-[#d4af37]/35 text-[#d4af37] font-semibold rounded-full hover:bg-[#d4af37]/10 transition-all duration-300 text-xs uppercase tracking-wider"
+                    className="inline-flex items-center justify-center px-6 py-3.5 bg-[#d4af37] text-black font-bold rounded-full hover:bg-[#f0d060] transition-all duration-300 hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] text-xs uppercase tracking-wider"
                   >
                     Ver Categorías
                   </a>
@@ -106,30 +103,24 @@ export const ContentOverlay = ({ currentViewport, onExitCinematic }: ContentOver
                   isV2 ? 'opacity-100 translate-y-0 blur-0' : 'opacity-40 translate-y-4 blur-[2px]'
                 }`}
               >
-                <div className="inline-flex items-center gap-3 px-4 py-1.5 border border-[#d4af37]/25 rounded-full bg-[#d4af37]/5">
-                  <span className="text-[#d4af37] text-[10px] uppercase tracking-[0.25em] font-bold font-outfit">
-                    El Reconocimiento
-                  </span>
-                  <div className="w-8 h-px bg-[#d4af37]/40" />
-                </div>
-                
+
                 <h2 className="text-4xl xl:text-5xl font-bold font-outfit text-white leading-[1.05]">
-                  Un Legado de<br />
-                  <span className="gold-shimmer">Excelencia</span>
+                  {tScene2('title1')}<br />
+                  <span className="gold-shimmer">{tScene2('title2')}</span>
                 </h2>
                 
                 <p className="text-neutral-300 text-base leading-relaxed">
-                  Más de doscientos establecimientos compiten cada año por demostrar que la hospitalidad en el Quindío alcanza estándares internacionales. El momento de la entrega es el reconocimiento al trabajo de toda una vida.
+                  {tScene2('description')}
                 </p>
                 
                 <div className="flex gap-8 pt-4 border-t border-white/5 w-full justify-end">
                   <div>
-                    <div className="text-2xl font-bold text-[#d4af37] font-outfit">15 Nov</div>
-                    <div className="text-[10px] text-neutral-500 uppercase tracking-wider">Fecha de la Gala</div>
+                    <div className="text-2xl font-bold text-[#d4af37] font-outfit">{tScene2('date')}</div>
+                    <div className="text-[10px] text-neutral-500 uppercase tracking-wider">{tScene2('dateLabel')}</div>
                   </div>
                   <div className="border-l border-white/10 pl-8">
-                    <div className="text-2xl font-bold text-[#d4af37] font-outfit">+500</div>
-                    <div className="text-[10px] text-neutral-500 uppercase tracking-wider">Invitados VIP</div>
+                    <div className="text-2xl font-bold text-[#d4af37] font-outfit">{tScene2('voting')}</div>
+                    <div className="text-[10px] text-neutral-500 uppercase tracking-wider">{tScene2('votingLabel')}</div>
                   </div>
                 </div>
               </div>
@@ -140,37 +131,32 @@ export const ContentOverlay = ({ currentViewport, onExitCinematic }: ContentOver
         {/* Section 3 Viewport Page */}
         <div className="w-full h-screen flex items-center relative">
           <Container className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center h-full py-16">
-            <div className="lg:col-span-6 flex flex-col justify-center pointer-events-auto">
+            <div className="hidden lg:block lg:col-span-6" />
+            <div className="lg:col-span-6 flex flex-col justify-center items-end pointer-events-auto">
               <div 
-                className={`p-10 rounded-3xl bg-black/28 backdrop-blur-[14px] border border-[#d4af37]/12 shadow-2xl space-y-6 max-w-xl transition-all duration-[1200ms] ${
+                className={`p-10 rounded-3xl bg-black/28 backdrop-blur-[14px] border border-[#d4af37]/12 shadow-2xl space-y-6 max-w-xl text-right items-end flex flex-col transition-all duration-[1200ms] ${
                   isV3 ? 'opacity-100 translate-y-0 blur-0' : 'opacity-40 translate-y-4 blur-[2px]'
                 }`}
               >
-                <div className="inline-flex items-center gap-3 px-4 py-1.5 border border-[#d4af37]/25 rounded-full bg-[#d4af37]/5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#d4af37]" />
-                  <span className="text-[#d4af37] text-[10px] uppercase tracking-[0.25em] font-bold font-outfit">
-                    El Símbolo
-                  </span>
-                </div>
-                
+
                 <h2 className="text-4xl xl:text-5xl font-bold font-outfit leading-[1.05]">
-                  <span className="block text-white">EL</span>
-                  <span className="block gold-shimmer">GALARDÓN</span>
+                  <span className="block text-white">{tScene3('title1')}</span>
+                  <span className="block gold-shimmer">{tScene3('title2')}</span>
                 </h2>
                 
                 <p className="text-neutral-300 text-base leading-relaxed">
-                  Más que un trofeo. Es el testimonio tangible de años de dedicación, innovación y amor por la hospitalidad nocturna regional.
+                  {tScene3('description1')} {tScene3('description2')}
                 </p>
                 
                 <div className="flex gap-6 pt-4 border-t border-white/5">
                   {[
-                    { label: 'Material', value: 'Fundición' },
-                    { label: 'Peso', value: '2.4 kg' },
-                    { label: 'Altura', value: '38 cm' },
+                    { key: 'organizer' },
+                    { key: 'venue' },
+                    { key: 'date' },
                   ].map(spec => (
-                    <div key={spec.label} className="flex-1">
-                      <div className="text-[#d4af37] font-bold text-sm font-outfit">{spec.value}</div>
-                      <div className="text-[10px] text-neutral-500 uppercase tracking-wider mt-0.5">{spec.label}</div>
+                    <div key={spec.key} className="flex-1">
+                      <div className="text-[#d4af37] font-bold text-sm font-outfit">{tScene3(`specs.${spec.key}.value`)}</div>
+                      <div className="text-[10px] text-neutral-500 uppercase tracking-wider mt-0.5">{tScene3(`specs.${spec.key}.label`)}</div>
                     </div>
                   ))}
                 </div>

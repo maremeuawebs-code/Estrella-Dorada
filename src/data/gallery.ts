@@ -1,7 +1,7 @@
 export const galleryImages = [
-  { id: '1', url: 'https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=800&auto=format&fit=crop', title: 'Gala 2025', span: 'col-span-2 row-span-2' },
-  { id: '2', url: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=800&auto=format&fit=crop', title: 'Cocktails', span: 'col-span-1 row-span-1' },
-  { id: '3', url: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=800&auto=format&fit=crop', title: 'Atmosphere', span: 'col-span-1 row-span-2' },
-  { id: '4', url: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=800&auto=format&fit=crop', title: 'Mixology', span: 'col-span-1 row-span-1' },
-  { id: '5', url: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop', title: 'Cuisine', span: 'col-span-2 row-span-1' }
+  { id: 1, src: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop', key: 'awards', span: 'col-span-2 row-span-2' },
+  { id: 2, src: 'https://images.unsplash.com/photo-1542314831-c6a4d14faaf2?q=80&w=800&auto=format&fit=crop', key: 'carpet', span: 'col-span-1 row-span-1' },
+  { id: 3, src: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=800&auto=format&fit=crop', key: 'show', span: 'col-span-1 row-span-2' },
+  { id: 4, src: 'https://images.unsplash.com/photo-1523580494112-071d16940a02?q=80&w=800&auto=format&fit=crop', key: 'winners', span: 'col-span-1 row-span-1' },
+  { id: 5, src: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=800&auto=format&fit=crop', key: 'vip', span: 'col-span-2 row-span-1' }
 ];

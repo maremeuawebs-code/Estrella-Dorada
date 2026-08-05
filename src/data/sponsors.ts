@@ -6,18 +6,23 @@ export interface Sponsor {
 
 export const sponsors = {
   diamond: [
-    { name: 'ASOBARES COLOMBIA', role: 'Organizador Oficial', glow: true },
-    { name: 'GOBIERNO DEL QUINDÍO', role: 'Apoyo Institucional' },
+    { name: 'LICORERA DE CALDAS', role: 'Patrocinador', glow: true },
+    { name: 'LICORERA DE ANTIOQUIA', role: 'Patrocinador', glow: true },
+    { name: 'DIAGEO', role: 'Patrocinador', glow: true },
   ],
   gold: [
-    { name: 'RON MEDELLÍN', role: 'Patrocinador Oficial' },
-    { name: 'CHAMPAGNE DOM PÉRIGNON', role: 'Aliado de Lujo' },
-    { name: 'AGUARDIENTE ANTIOQUEÑO', role: 'Patrocinador Plata' },
-    { name: 'HOTEL MOCAWA PLAZA', role: 'Hospedaje Oficial' },
+    { name: 'CAMARA DE COMERCIO', role: 'Aliado' },
+    { name: 'ACODRES', role: 'Aliado' },
+    { name: 'ANATO', role: 'Aliado' },
+    { name: 'COTELCO', role: 'Aliado' },
   ],
   allies: [
-    { name: 'Cámara de Comercio de Armenia', role: 'Aliado Estratégico' },
-    { name: 'Quindío Turismo Regional', role: 'Promotor Oficial' },
-    { name: 'Eje Cafetero Gourmet', role: 'Prensa Oficial' },
+    { name: 'FONDA LA FLORESTA', role: 'Sede Oficial' },
   ]
+};
+
+export const sponsorKeys = {
+  diamond: [{ key: 'licoreraCaldas' }, { key: 'licoreraAntioquia' }, { key: 'diageo' }],
+  gold: [{ key: 'camaraComercio' }, { key: 'acodres' }, { key: 'cotelco' }, { key: 'anato' }],
+  allies: [{ key: 'fondaLaFloresta' }, { key: 'olimpicaStereo' }]
 };

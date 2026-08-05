@@ -1,20 +1,238 @@
 {
+  "Navigation": {
+    "about": "The Event",
+    "categories": "Categories",
+    "timeline": "Schedule",
+    "sponsors": "Partners",
+    "contact": "Contact"
+  },
   "Hero": {
-    "title": "GOLDEN STAR AWARDS",
-    "subtitle": "The highest distinction of the Coffee Axis",
-    "cta": "Discover the Experience"
+    "title1": "ESTRELLA",
+    "title2": "DORADA",
+    "title3": "AWARDS",
+    "subtitle": "The most prestigious distinction in the entertainment, gastronomy, and nightlife industry in Colombia's Coffee Region.",
+    "cta": "Explore Categories",
+    "date": "Sep 24, 2026",
+    "dateLabel": "Date",
+    "venue": "Fonda La Floresta",
+    "venueLabel": "Venue",
+    "city": "Armenia, Quindío",
+    "cityLabel": "City"
   },
   "About": {
-    "title": "THE EVENT",
-    "description": "A night dedicated to rewarding excellence and passion in the gastronomy and entertainment industry."
+    "title": "The Distinction that",
+    "titleHighlight": "Makes a Difference",
+    "description1": "The Estrella Dorada Awards celebrate the talent, innovation, and dedication of those who make the nights and gastronomy of our region shine.",
+    "description2": "A space where industry leaders gather to recognize the establishments that raise the standard of service and entertainment in Colombia.",
+    "metrics": {
+      "categories": { "value": "13", "label": "Categories", "desc": "Covering the entire nightlife industry" },
+      "date": { "value": "Sep 2026", "label": "Gala Date", "desc": "A night of recognition" },
+      "location": { "value": "Armenia", "label": "Quindío, Colombia", "desc": "Official event venue" },
+      "voting": { "value": "August", "label": "Public Voting", "desc": "Selection of the winners" }
+    },
+    "presentersTitle": "Official Presenters",
+    "presentersDesc": "Meet the hosts of the night who will guide this great celebration.",
+    "presenters": {
+      "manuela": { "name": "Manuela Bedoya", "role": "Communications Director", "company": "CCAQ", "instagram": "@manulau91" },
+      "felipe": { "name": "Felipe Isaza", "role": "Director", "company": "Olímpica", "instagram": "@elgatoisaza" }
+    }
+  },
+  "Scene2": {
+    "title1": "A Legacy of",
+    "title2": "Excellence",
+    "description": "Establishments from across the region compete to prove that hospitality in Quindío reaches world-class standards. A night to recognize the hard work and dedication of an entire industry.",
+    "date": "Sep 24",
+    "dateLabel": "Gala Date",
+    "voting": "August",
+    "votingLabel": "Public Voting"
+  },
+  "Scene3": {
+    "title1": "THE",
+    "title2": "AWARD",
+    "description1": "The most important recognition in the nightlife and gastronomy industry in the Coffee Region.",
+    "description2": "Organized by Asobares Quindío, this award celebrates the establishments, artists, and people who drive the industry in Armenia and Quindío.",
+    "specs": {
+      "organizer": { "label": "Organizer", "value": "Asobares Quindío" },
+      "venue": { "label": "Venue", "value": "Fonda La Floresta" },
+      "date": { "label": "Date", "value": "Sep 24, 2026" }
+    },
+    "bottomLabel": "Estrella Dorada Awards"
   },
   "Categories": {
-    "title": "CATEGORIES"
+    "title": "Categories 2026",
+    "subtitle": "Excellence at its Finest",
+    "items": {
+      "gastrobar": { "title": "Best Gastrobar", "description": "Highlights the perfect fusion of haute cuisine and nightlife entertainment, creating unique experiences." },
+      "discoteca": { "title": "Best Nightclub", "description": "Rewards design, atmosphere, sound, and the overall pure nightlife experience." },
+      "artista": { "title": "Best Artist / DJ", "description": "Recognizes the talent that sets the rhythm and keeps the energy at the highest level." },
+      "barman": { "title": "Best Barman / Bartender", "description": "Celebrates the innovation, technique, and charisma behind the most prestigious bars." },
+      "evento": { "title": "Best Event of the Year", "description": "The event that broke the mold and generated the greatest cultural impact." },
+      "rooftop": { "title": "Best Rooftop", "description": "The best views combined with premium service and a sophisticated atmosphere." },
+      "revelacion": { "title": "Breakthrough Establishment", "description": "The most innovative new proposal that transformed the local scene." },
+      "servicio": { "title": "Excellence in Service", "description": "The gold standard in customer service and consistent hospitality." },
+      "diseño": { "title": "Best Design / Architecture", "description": "Unique spaces that visually dazzle and optimize the experience." },
+      "productor": { "title": "Best Music Producer", "description": "The mastermind behind the sounds that define our nights." },
+      "seguridad": { "title": "Security Award", "description": "Recognizes the protocols and team that guarantee safe nights for everyone." },
+      "sostenibilidad": { "title": "Sustainability Award", "description": "Establishments leading eco-friendly practices and social impact." },
+      "trayectoria": { "title": "Lifetime Achievement Award", "description": "Recognition for a lifetime of contributions and legacy in the industry." }
+    }
   },
   "Timeline": {
-    "title": "GALA AGENDA"
+    "title": "Gala Schedule",
+    "subtitle": "A night to remember",
+    "items": {
+      "arrival": { "time": "18:30", "event": "Arrival and Check-in", "description": "Event entry. Formal gala attire (best mask will be awarded)." },
+      "start": { "time": "19:00", "event": "Ceremony Starts", "description": "Official opening of the Estrella Dorada Awards 2026." },
+      "end": { "time": "22:00", "event": "Event Closure", "description": "End of the official ceremony." }
+    }
+  },
+  "Nominations": {
+    "title": "Join the Conversation",
+    "subtitle": "Information and Contact",
+    "description": "Public voting takes place in August 2026. If you want to know more about the categories, the process, or how to participate, contact us directly via the form.",
+    "cta": "Go to Form"
+  },
+  "Sponsors": {
+    "title": "Strategic Alliances",
+    "subtitle": "Driving the sector",
+    "description": "Leading brands that trust in the development and professionalization of the entertainment and gastronomy industry.",
+    "becomeSponsor": "Become a Partner",
+    "marqueeText": "ESTRELLA DORADA AWARDS 2026 • THE INDUSTRY UNITED • ",
+    "roles": {
+      "organizer": "Main Organizer",
+      "main": "Official Sponsor",
+      "gold": "Gold Sponsor",
+      "silver": "Silver Sponsor",
+      "media": "Media Partner",
+      "beverage": "Beverage Partner",
+      "tech": "Tech Partner"
+    },
+    "items": {
+      "licoreraCaldas": {
+        "name": "LICORERA DE CALDAS",
+        "role": "Sponsor"
+      },
+      "licoreraAntioquia": {
+        "name": "LICORERA DE ANTIOQUIA",
+        "role": "Sponsor"
+      },
+      "diageo": {
+        "name": "DIAGEO",
+        "role": "Sponsor"
+      },
+      "camaraComercio": {
+        "name": "CHAMBER OF COMMERCE",
+        "role": "Strategic Ally"
+      },
+      "acodres": {
+        "name": "ACODRES",
+        "role": "Strategic Ally"
+      },
+      "cotelco": {
+        "name": "COTELCO",
+        "role": "Strategic Ally"
+      },
+      "anato": {
+        "name": "ANATO",
+        "role": "Strategic Ally"
+      },
+      "fondaLaFloresta": {
+        "name": "FONDA LA FLORESTA",
+        "role": "Official Venue"
+      },
+      "olimpicaStereo": {
+        "name": "OLÍMPICA STEREO",
+        "role": "Official Press"
+      }
+    }
+  },
+  "Gallery": {
+    "title": "Previous Editions",
+    "subtitle": "Golden memories",
+    "description": "Relive the most memorable moments, the emotions, and the greatness of past ceremonies. A testament to the evolution of our industry.",
+    "viewMore": "View Full Gallery",
+    "items": {
+      "awards": "Award Ceremony",
+      "carpet": "Red Carpet",
+      "show": "Central Show",
+      "winners": "Winners",
+      "vip": "VIP Experience"
+    }
+  },
+  "News": {
+    "title": "Latest News",
+    "subtitle": "Stay informed",
+    "description": "News, official announcements, and everything you need to know heading to the 2026 Gala.",
+    "viewAll": "View all news",
+    "items": {
+      "soon1": { "title": "Coming Soon", "category": "News", "excerpt": "We will soon announce the news for the 2026 Estrella Dorada Gala. Follow us on social media to stay updated.", "date": "Soon", "readTime": "1 min" },
+      "soon2": { "title": "Coming Soon", "category": "News", "excerpt": "We will soon announce the news for the 2026 Estrella Dorada Gala. Follow us on social media to stay updated.", "date": "Soon", "readTime": "1 min" },
+      "soon3": { "title": "Coming Soon", "category": "News", "excerpt": "We will soon announce the news for the 2026 Estrella Dorada Gala. Follow us on social media to stay updated.", "date": "Soon", "readTime": "1 min" }
+    }
   },
   "FAQ": {
-    "title": "FAQ"
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know",
+    "items": {
+      "q1": { "question": "When and where is the event?", "answer": "The Estrella Dorada Awards gala will take place on September 24, 2026, from 19:00 to 22:00, at Fonda La Floresta (Cra. 6 #29, Armenia, Quindío)." },
+      "q2": { "question": "What is the dress code?", "answer": "Formal gala attire with a mask (Formal - mask). The best mask will be awarded." },
+      "q3": { "question": "Who can attend?", "answer": "The event is for people over 18 years old. With prior VIP nominee tickets marked or sent via WhatsApp, they must be shown at the entrance." },
+      "q4": { "question": "Is parking available?", "answer": "Yes, parking is available in the Fonda La Floresta area." },
+      "q5": { "question": "When is public voting?", "answer": "Public voting takes place during the month of August 2026. Stay tuned to our official channels." },
+      "q6": { "question": "Who do I contact if I have questions?", "answer": "You can contact NATALIA at the email asobaresquindio@asobares.org or via WhatsApp +57 321 554 9513." }
+    }
+  },
+  "Location": {
+    "title": "Official Venue",
+    "subtitle": "The perfect stage",
+    "venue": "FONDA LA FLORESTA",
+    "description": "An emblematic space that combines Quindian tradition with the versatility needed for a world-class event. Equipped with the best lighting and sound technology to guarantee an unforgettable gala.",
+    "directions": "Get Directions",
+    "coordinatesLabel": "Gala Coordinates"
+  },
+  "Contact": {
+    "title": "Contact and Information",
+    "subtitle": "We are here to help",
+    "description": "Do you have questions about the event, the categories, or how to participate? Write to us and our team will respond shortly.",
+    "form": {
+      "name": "Company or Person Name",
+      "namePlaceholder": "E.g. Gastrobar El Encanto",
+      "email": "Official Email",
+      "emailPlaceholder": "contact@company.com",
+      "subject": "Subject / Inquiry",
+      "subjectPlaceholder": "E.g. Information about categories",
+      "message": "Detailed Message",
+      "messagePlaceholder": "Tell us your questions...",
+      "submit": "Send Request",
+      "sending": "Sending...",
+      "sent": "✓ Request Sent"
+    },
+    "whatsappText": "Or contact us directly via WhatsApp",
+    "whatsappNumber": "+57 321 554 9513"
+  },
+  "Footer": {
+    "description": "The most prestigious award in the nightlife and gastronomy entertainment industry in the Coffee Region.",
+    "quickLinks": "Quick Links",
+    "about": "About the Event",
+    "categories": "Categories",
+    "agenda": "Schedule",
+    "nominations": "Nominations",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "organizedBy": "Organized by Asobares Quindío",
+    "email": "asobaresquindio@asobares.org",
+    "whatsapp": "+57 321 554 9513",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions",
+      "press": "Press Kit"
+    }
+  },
+  "Mixologia": {
+    "title": "ORIGIN Mixology",
+    "subtitle": "The Cocktail Route",
+    "description": "We are looking for the best signature cocktail in Quindío! Asobares Quindío Chapter invites the best bars and gastrobars to submit their cocktail proposal in Mixology 360°. During the route, a panel of qualified judges will visit each establishment to evaluate technique, concept, service, and sensory balance. The official registration method will be published soon. Register your venue and compete for industry recognition.",
+    "cta": "Submit Establishment",
+    "formLink": "https://docs.google.com/forms/d/e/1FAIpQLScY48Sfyk-zNmpcNrko2mhHu3uUvu_mNffm5G-vnm32cF5VHQ/viewform"
   }
 }

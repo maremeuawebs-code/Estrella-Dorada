@@ -12,8 +12,8 @@ export const useFrameSequence = () => {
     const hookMountTime = performance.now();
     
     const preloadSequence = async () => {
-      const s1Count = 96;
-      const s2Count = 96;
+      const s1Count = 104;
+      const s2Count = 88;
       const totalToLoad = s1Count + s2Count;
       let loadedCount = 0;
 
@@ -21,11 +21,11 @@ export const useFrameSequence = () => {
       const s2List = new Array(s2Count).fill(null) as HTMLImageElement[];
 
       const loadBatch = async (
-        scene: 'scene-01' | 'scene-02',
         startIdx: number,
         endIdx: number,
         targetList: HTMLImageElement[],
-        onBatchComplete: () => void
+        onBatchComplete: () => void,
+        offset: number = 0
       ) => {
         const BATCH_SIZE = 24;
         for (let i = startIdx; i <= endIdx; i += BATCH_SIZE) {
@@ -35,7 +35,8 @@ export const useFrameSequence = () => {
           
           for (let j = i; j <= chunkEnd; j++) {
             const img = new Image();
-            img.src = `/cinematic/desktop/${scene}/frame_${j.toString().padStart(4, '0')}.webp`;
+            const frameNumber = j + offset;
+            img.src = `/cinematic/desktop/scene-main/frame_${frameNumber.toString().padStart(6, '0')}.webp`;
             promises.push(new Promise<void>((resolve) => {
               img.onload = () => resolve();
               img.onerror = () => resolve();
@@ -51,7 +52,7 @@ export const useFrameSequence = () => {
 
       // 1. Prioritized Load: First 24 frames of Scene 1
       const initialBatch = 24;
-      await loadBatch('scene-01', 1, initialBatch, s1List, () => {
+      await loadBatch(1, initialBatch, s1List, () => {
         setScene1Frames([...s1List]);
         setLoadingProgress(loadedCount / totalToLoad);
       });
@@ -81,14 +82,15 @@ export const useFrameSequence = () => {
       }
 
       // 2. Background Load: Remaining Scene 1
-      await loadBatch('scene-01', initialBatch + 1, s1Count, s1List, () => {
+      await loadBatch(initialBatch + 1, s1Count, s1List, () => {
         setScene1Frames([...s1List]);
       });
 
       // 3. Background Load: Scene 2
-      await loadBatch('scene-02', 1, s2Count, s2List, () => {
+      // We apply an offset of 104 so frame 1 of Scene 2 loads frame_000105.webp
+      await loadBatch(1, s2Count, s2List, () => {
         setScene2Frames([...s2List]);
-      });
+      }, 104);
 
       const t2 = performance.now();
       

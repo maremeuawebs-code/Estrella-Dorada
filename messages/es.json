@@ -1,20 +1,238 @@
 {
+  "Navigation": {
+    "about": "El Evento",
+    "categories": "Categorías",
+    "timeline": "Agenda",
+    "sponsors": "Aliados",
+    "contact": "Contacto"
+  },
   "Hero": {
-    "title": "PREMIOS ESTRELLA DORADA",
-    "subtitle": "La máxima distinción del Eje Cafetero",
-    "cta": "Descubrir la Experiencia"
+    "title1": "PREMIOS",
+    "title2": "ESTRELLA",
+    "title3": "DORADA",
+    "subtitle": "La distinción más prestigiosa de la industria del entretenimiento, la gastronomía y la vida nocturna en el Eje Cafetero de Colombia.",
+    "cta": "Explorar Categorías",
+    "date": "24 Sep 2026",
+    "dateLabel": "Fecha",
+    "venue": "Fonda La Floresta",
+    "venueLabel": "Lugar",
+    "city": "Armenia, Quindío",
+    "cityLabel": "Ciudad"
   },
   "About": {
-    "title": "EL EVENTO",
-    "description": "Una noche dedicada a premiar la excelencia y la pasión de la industria gastronómica y de entretenimiento."
+    "title": "La Distinción que",
+    "titleHighlight": "Marca la Diferencia",
+    "description1": "Los Premios Estrella Dorada celebran el talento, la innovación y la dedicación de quienes hacen brillar las noches y la gastronomía de nuestra región.",
+    "description2": "Un espacio donde los líderes de la industria se reúnen para reconocer a los establecimientos que elevan el estándar de servicio y entretenimiento en Colombia.",
+    "metrics": {
+      "categories": { "value": "13", "label": "Categorías", "desc": "Cubriendo toda la industria nocturna" },
+      "date": { "value": "Sep 2026", "label": "Fecha de la Gala", "desc": "Una noche de reconocimiento" },
+      "location": { "value": "Armenia", "label": "Quindío, Colombia", "desc": "Sede oficial del evento" },
+      "voting": { "value": "Agosto", "label": "Votación Pública", "desc": "Elección de los ganadores" }
+    },
+    "presentersTitle": "Presentadores Oficiales",
+    "presentersDesc": "Conoce a los anfitriones de la noche que guiarán esta gran celebración.",
+    "presenters": {
+      "manuela": { "name": "Manuela Bedoya", "role": "Directora de Comunicaciones", "company": "CCAQ", "instagram": "@manulau91" },
+      "felipe": { "name": "Felipe Isaza", "role": "Director", "company": "Olímpica", "instagram": "@elgatoisaza" }
+    }
+  },
+  "Scene2": {
+    "title1": "Un Legado de",
+    "title2": "Excelencia",
+    "description": "Establecimientos de toda la región compiten por demostrar que la hospitalidad en el Quindío alcanza estándares de clase mundial. Una noche para reconocer el trabajo y la dedicación de toda una industria.",
+    "date": "24 Sep",
+    "dateLabel": "Fecha de la Gala",
+    "voting": "Agosto",
+    "votingLabel": "Votación Pública"
+  },
+  "Scene3": {
+    "title1": "EL",
+    "title2": "GALARDÓN",
+    "description1": "El reconocimiento más importante de la industria del entretenimiento nocturno y gastronómico en el Eje Cafetero.",
+    "description2": "Organizado por Asobares Quindío, este galardón celebra a los establecimientos, artistas y personas que impulsan la industria en Armenia y el Quindío.",
+    "specs": {
+      "organizer": { "label": "Organizador", "value": "Asobares Quindío" },
+      "venue": { "label": "Sede", "value": "Fonda La Floresta" },
+      "date": { "label": "Fecha", "value": "24 Sep 2026" }
+    },
+    "bottomLabel": "Premios Estrella Dorada"
   },
   "Categories": {
-    "title": "CATEGORÍAS"
+    "title": "Categorías 2026",
+    "subtitle": "La Excelencia en su Máxima Expresión",
+    "items": {
+      "gastrobar": { "title": "Mejor Gastrobar", "description": "Destaca la fusión perfecta entre alta cocina y entretenimiento nocturno, creando experiencias únicas." },
+      "discoteca": { "title": "Mejor Discoteca", "description": "Premia el diseño, ambiente, sonido y experiencia general de la vida nocturna pura." },
+      "artista": { "title": "Mejor Artista / DJ", "description": "Reconoce el talento que marca el ritmo y mantiene la energía al máximo nivel." },
+      "barman": { "title": "Mejor Barman / Bartender", "description": "Celebra la innovación, técnica y carisma detrás de las barras más prestigiosas." },
+      "evento": { "title": "Mejor Evento del Año", "description": "El evento que rompió esquemas y generó el mayor impacto cultural." },
+      "rooftop": { "title": "Mejor Rooftop", "description": "Las mejores vistas combinadas con servicio premium y ambiente sofisticado." },
+      "revelacion": { "title": "Establecimiento Revelación", "description": "La propuesta nueva más innovadora que transformó la escena local." },
+      "servicio": { "title": "Excelencia en Servicio", "description": "El estándar de oro en atención al cliente y hospitalidad constante." },
+      "diseño": { "title": "Mejor Diseño / Arquitectura", "description": "Espacios únicos que deslumbran visualmente y optimizan la experiencia." },
+      "productor": { "title": "Mejor Productor Musical", "description": "La mente maestra detrás de los sonidos que definen nuestras noches." },
+      "seguridad": { "title": "Premio a la Seguridad", "description": "Reconoce los protocolos y el equipo que garantizan noches seguras para todos." },
+      "sostenibilidad": { "title": "Premio Sostenibilidad", "description": "Establecimientos liderando prácticas eco-amigables e impacto social." },
+      "trayectoria": { "title": "Premio a la Trayectoria", "description": "Reconocimiento a una vida de aportes y legado en la industria." }
+    }
   },
   "Timeline": {
-    "title": "AGENDA DE LA GALA"
+    "title": "Agenda de la Gala",
+    "subtitle": "Una noche para recordar",
+    "items": {
+      "arrival": { "time": "18:30", "event": "Llegada e Ingreso", "description": "Ingreso al evento. Vestimenta formal tipo gala (se premiará al mejor antifaz)." },
+      "start": { "time": "19:00", "event": "Inicio de la Ceremonia", "description": "Apertura oficial de la Gala Premios Estrella Dorada 2026." },
+      "end": { "time": "22:00", "event": "Cierre del Evento", "description": "Fin de la ceremonia oficial." }
+    }
+  },
+  "Nominations": {
+    "title": "Únete a la Conversación",
+    "subtitle": "Información y Contacto",
+    "description": "La votación pública se realiza en agosto de 2026. Si quieres conocer más sobre las categorías, el proceso o cómo participar, contáctanos directamente a través del formulario.",
+    "cta": "Ir a Formulario"
+  },
+  "Sponsors": {
+    "title": "Alianzas Estratégicas",
+    "subtitle": "Impulsando el sector",
+    "description": "Marcas líderes que confían en el desarrollo y profesionalización de la industria del entretenimiento y la gastronomía.",
+    "becomeSponsor": "Conviértete en Aliado",
+    "marqueeText": "PREMIOS ESTRELLA DORADA 2026 • LA INDUSTRIA UNIDA • ",
+    "roles": {
+      "organizer": "Organizador Principal",
+      "main": "Patrocinador Oficial",
+      "gold": "Patrocinador Oro",
+      "silver": "Patrocinador Plata",
+      "media": "Media Partner",
+      "beverage": "Beverage Partner",
+      "tech": "Tech Partner"
+    },
+    "items": {
+      "licoreraCaldas": {
+        "name": "LICORERA DE CALDAS",
+        "role": "Patrocinador"
+      },
+      "licoreraAntioquia": {
+        "name": "LICORERA DE ANTIOQUIA",
+        "role": "Patrocinador"
+      },
+      "diageo": {
+        "name": "DIAGEO",
+        "role": "Patrocinador"
+      },
+      "camaraComercio": {
+        "name": "CÁMARA DE COMERCIO",
+        "role": "Aliado Estratégico"
+      },
+      "acodres": {
+        "name": "ACODRES",
+        "role": "Aliado Estratégico"
+      },
+      "cotelco": {
+        "name": "COTELCO",
+        "role": "Aliado Estratégico"
+      },
+      "anato": {
+        "name": "ANATO",
+        "role": "Aliado Estratégico"
+      },
+      "fondaLaFloresta": {
+        "name": "FONDA LA FLORESTA",
+        "role": "Sede Oficial"
+      },
+      "olimpicaStereo": {
+        "name": "OLÍMPICA STEREO",
+        "role": "Prensa Oficial"
+      }
+    }
+  },
+  "Gallery": {
+    "title": "Ediciones Anteriores",
+    "subtitle": "Memorias doradas",
+    "description": "Revive los momentos más memorables, las emociones y la grandeza de las ceremonias pasadas. Un testimonio de la evolución de nuestra industria.",
+    "viewMore": "Ver Galería Completa",
+    "items": {
+      "awards": "Ceremonia de Premiación",
+      "carpet": "Alfombra Roja",
+      "show": "Show Central",
+      "winners": "Ganadores",
+      "vip": "Experiencia VIP"
+    }
+  },
+  "News": {
+    "title": "Últimas Noticias",
+    "subtitle": "Mantente informado",
+    "description": "Novedades, anuncios oficiales y todo lo que necesitas saber rumbo a la Gala 2026.",
+    "viewAll": "Ver todas las noticias",
+    "items": {
+      "soon1": { "title": "Próximamente", "category": "Noticias", "excerpt": "Pronto anunciaremos las novedades de la Gala Estrella Dorada 2026. Síguenos en redes para estar al tanto.", "date": "Pronto", "readTime": "1 min" },
+      "soon2": { "title": "Próximamente", "category": "Noticias", "excerpt": "Pronto anunciaremos las novedades de la Gala Estrella Dorada 2026. Síguenos en redes para estar al tanto.", "date": "Pronto", "readTime": "1 min" },
+      "soon3": { "title": "Próximamente", "category": "Noticias", "excerpt": "Pronto anunciaremos las novedades de la Gala Estrella Dorada 2026. Síguenos en redes para estar al tanto.", "date": "Pronto", "readTime": "1 min" }
+    }
   },
   "FAQ": {
-    "title": "PREGUNTAS FRECUENTES"
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Todo lo que necesitas saber",
+    "items": {
+      "q1": { "question": "¿Cuándo y dónde será el evento?", "answer": "La gala de los premios Estrella Dorada se llevará a cabo el 24 de Septiembre de 2026, de 19:00 a 22:00, en Fonda La Floresta (Cra. 6 #29, Armenia, Quindío)." },
+      "q2": { "question": "¿Cuál es el código de vestimenta?", "answer": "Vestimenta formal tipo gala con antifaz (Formal - antifaz). Se premiará al mejor antifaz." },
+      "q3": { "question": "¿Quiénes pueden ingresar?", "answer": "El evento es para mayores de 18 años. Con entradas previas de los nominados VIP marcadas o enviadas al WhatsApp, deberán mostrarla a la entrada." },
+      "q4": { "question": "¿Hay parqueadero disponible?", "answer": "Sí, hay disponibilidad de parqueadero en el sector de Fonda La Floresta." },
+      "q5": { "question": "¿Cuándo son las votaciones públicas?", "answer": "Las votaciones públicas se realizan durante el mes de agosto de 2026. Mantente atento a nuestros canales oficiales." },
+      "q6": { "question": "¿Con quién me contacto si tengo dudas?", "answer": "Puedes contactar a NATALIA al correo asobaresquindio@asobares.org o al WhatsApp +57 321 554 9513." }
+    }
+  },
+  "Location": {
+    "title": "Sede Oficial",
+    "subtitle": "El escenario perfecto",
+    "venue": "FONDA LA FLORESTA",
+    "description": "Un espacio emblemático que combina la tradición quindiana con la versatilidad necesaria para un evento de clase mundial. Equipado con la mejor tecnología de iluminación y sonido para garantizar una gala inolvidable.",
+    "directions": "Obtener Direcciones",
+    "coordinatesLabel": "Coordenadas de la Gala"
+  },
+  "Contact": {
+    "title": "Contacto e Información",
+    "subtitle": "Estamos para ayudarte",
+    "description": "¿Tienes dudas sobre el evento, las categorías o cómo participar? Escríbenos y nuestro equipo te responderá a la brevedad.",
+    "form": {
+      "name": "Nombre de la Empresa o Persona",
+      "namePlaceholder": "Ej. Gastrobar El Encanto",
+      "email": "Correo Electrónico Oficial",
+      "emailPlaceholder": "contacto@empresa.com",
+      "subject": "Asunto / Consulta",
+      "subjectPlaceholder": "Ej. Información sobre categorías",
+      "message": "Mensaje Detallado",
+      "messagePlaceholder": "Cuéntanos tus dudas...",
+      "submit": "Enviar Solicitud",
+      "sending": "Enviando...",
+      "sent": "✓ Solicitud Enviada"
+    },
+    "whatsappText": "O contáctanos directamente por WhatsApp",
+    "whatsappNumber": "+57 321 554 9513"
+  },
+  "Footer": {
+    "description": "El galardón más prestigioso de la industria del entretenimiento nocturno y gastronómico del Eje Cafetero.",
+    "quickLinks": "Enlaces Rápidos",
+    "about": "Sobre el Evento",
+    "categories": "Categorías",
+    "agenda": "Agenda",
+    "nominations": "Nominaciones",
+    "contact": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "organizedBy": "Organiza Asobares Quindío",
+    "email": "asobaresquindio@asobares.org",
+    "whatsapp": "+57 321 554 9513",
+    "links": {
+      "privacy": "Política de Privacidad",
+      "terms": "Términos y Condiciones",
+      "press": "Kit de Prensa"
+    }
+  },
+  "Mixologia": {
+    "title": "Mixología de ORIGEN",
+    "subtitle": "La Ruta del Cóctel",
+    "description": "¡Buscamos el mejor cóctel de autor del Quindío! Asobares Capítulo Quindío invita a los mejores bares y gastrobares a postular su propuesta coctelera en Mixologia 360°. Durante la ruta, un panel de jurados calificados visitará cada establecimiento para evaluar técnica, concepto, servicio y equilibrio sensorial. El método oficial de inscripción será publicado próximamente. Inscribe a tu local y compite por el reconocimiento del sector.",
+    "cta": "Postular Establecimiento",
+    "formLink": "https://docs.google.com/forms/d/e/1FAIpQLScY48Sfyk-zNmpcNrko2mhHu3uUvu_mNffm5G-vnm32cF5VHQ/viewform"
   }
 }

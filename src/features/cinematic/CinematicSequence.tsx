@@ -9,7 +9,7 @@ export const CinematicSequence = () => {
   const { scene1Frames, scene2Frames, progress } = useFrameSequence();
   const [currentViewport, setCurrentViewport] = useState<1 | 2 | 3 | 'landing'>(1);
   const [activeSequence, setActiveSequence] = useState<'scene1' | 'scene2'>('scene1');
-  const [frameIndex, setFrameIndex] = useState(0); // 0 to 95
+  const [frameIndex, setFrameIndex] = useState(0); // 0 to 103 (scene1) or 87 (scene2)
   const [isPlaying, setIsPlaying] = useState(false);
   const [animProgress, setAnimProgress] = useState(0);
   
@@ -40,8 +40,9 @@ export const CinematicSequence = () => {
     cooldownRef.current = true;
     setActiveSequence(sequenceName);
 
-    const startFrame = direction === 'forward' ? 0 : 95;
-    const endFrame = direction === 'forward' ? 95 : 0;
+    const maxIdx = sequenceName === 'scene1' ? 103 : 87;
+    const startFrame = direction === 'forward' ? 0 : maxIdx;
+    const endFrame = direction === 'forward' ? maxIdx : 0;
     const framesSource = sequenceName === 'scene1' ? scene1Frames : scene2Frames;
 
     if (framesSource.length === 0) {
@@ -64,7 +65,7 @@ export const CinematicSequence = () => {
         : 1 - Math.pow(-2 * progressRatio + 2, 3) / 2;
 
       const currentIdx = Math.round(startFrame + ease * (endFrame - startFrame));
-      const safeIdx = Math.min(Math.max(currentIdx, 0), 95);
+      const safeIdx = Math.min(Math.max(currentIdx, 0), maxIdx);
       
       setFrameIndex(safeIdx);
       setAnimProgress(progressRatio);
@@ -98,7 +99,7 @@ export const CinematicSequence = () => {
           e.preventDefault();
           setCurrentViewport(3);
           setActiveSequence('scene2');
-          setFrameIndex(95);
+          setFrameIndex(87);
           setAnimProgress(1);
         }
         return;
@@ -112,14 +113,14 @@ export const CinematicSequence = () => {
           setCurrentViewport(2);
           playSequence('scene1', 'forward', () => {
             setActiveSequence('scene1');
-            setFrameIndex(95);
+            setFrameIndex(103);
             setAnimProgress(0);
           });
         } else if (currentViewport === 2) {
           setCurrentViewport(3);
           playSequence('scene2', 'forward', () => {
             setActiveSequence('scene2');
-            setFrameIndex(95);
+            setFrameIndex(87);
             setAnimProgress(0);
           });
         } else if (currentViewport === 3) {
@@ -138,7 +139,7 @@ export const CinematicSequence = () => {
           setCurrentViewport(2);
           playSequence('scene2', 'reverse', () => {
             setActiveSequence('scene1');
-            setFrameIndex(95);
+            setFrameIndex(103);
             setAnimProgress(0);
           });
         }
@@ -182,7 +183,7 @@ export const CinematicSequence = () => {
           <div className="font-bold border-b border-[#d4af37]/20 pb-1 mb-1.5 uppercase">Cinematic Debug</div>
           <div>Viewport: <span className="text-white">{currentViewport}</span></div>
           <div>Sequence: <span className="text-white">{activeSequence}</span></div>
-          <div>Frame Index: <span className="text-white">{frameIndex + 1} / 96</span></div>
+          <div>Frame Index: <span className="text-white">{frameIndex + 1} / {activeSequence === 'scene1' ? 104 : 88}</span></div>
           <div>Progress: <span className="text-white">{Math.round(animProgress * 100)}%</span></div>
           <div>Scroll Locked: <span className="text-white">{currentViewport !== 'landing' ? 'TRUE' : 'FALSE'}</span></div>
           <div className="border-t border-[#d4af37]/20 pt-1 mt-1 space-y-1">

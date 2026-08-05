@@ -1,8 +1,10 @@
 'use client';
 import React from 'react';
 import { Container } from '@/components/ui/Container';
+import { useTranslations } from 'next-intl';
 
 export const Scene2Section = () => {
+  const t = useTranslations('Scene2');
   return (
     <section id="scene2" className="relative min-h-screen flex items-center bg-black overflow-hidden">
       {/* Subtle gradient divider */}
@@ -50,30 +52,24 @@ export const Scene2Section = () => {
 
         {/* Right: Content */}
         <div className="text-left lg:text-right flex flex-col justify-center">
-          <div className="inline-flex lg:justify-end items-center gap-3 mb-6">
-            <div className="w-12 h-px bg-[#d4af37]/40" />
-            <span className="text-[#d4af37] text-xs uppercase tracking-[0.3em]">El Reconocimiento</span>
-          </div>
 
           <h2 className="text-5xl xl:text-6xl font-bold font-outfit text-white leading-[1.05] mb-6">
-            Un Legado de<br />
-            <span className="gold-shimmer">Excelencia</span>
+            {t('title1')}<br />
+            <span className="gold-shimmer">{t('title2')}</span>
           </h2>
 
           <p className="text-neutral-400 text-lg leading-relaxed mb-8 max-w-md ml-auto">
-            Más de doscientos establecimientos compiten cada año por demostrar que 
-            la hospitalidad en el Quindío alcanza estándares internacionales. El momento 
-            de la entrega es el reconocimiento al trabajo de toda una vida.
+            {t('description')}
           </p>
 
           <div className="flex flex-col sm:flex-row lg:flex-row-reverse gap-6 lg:justify-start">
             <div className="border-l-2 lg:border-l-0 lg:border-r-2 border-[#d4af37]/30 pl-4 lg:pl-0 lg:pr-4">
-              <div className="text-3xl font-bold text-[#d4af37] font-outfit">15 Nov</div>
-              <div className="text-xs text-neutral-500 uppercase tracking-wider mt-1">Fecha de la Gala</div>
+              <div className="text-3xl font-bold text-[#d4af37] font-outfit">{t('date')}</div>
+              <div className="text-xs text-neutral-500 uppercase tracking-wider mt-1">{t('dateLabel')}</div>
             </div>
             <div className="border-l-2 lg:border-l-0 lg:border-r-2 border-[#d4af37]/30 pl-4 lg:pl-0 lg:pr-4">
-              <div className="text-3xl font-bold text-[#d4af37] font-outfit">+500</div>
-              <div className="text-xs text-neutral-500 uppercase tracking-wider mt-1">Invitados Esperados</div>
+              <div className="text-3xl font-bold text-[#d4af37] font-outfit">{t('voting')}</div>
+              <div className="text-xs text-neutral-500 uppercase tracking-wider mt-1">{t('votingLabel')}</div>
             </div>
           </div>
         </div>
