@@ -37,7 +37,7 @@ export const NewsSection = () => {
     {
       id: 'whatsapp',
       name: 'WhatsApp',
-      handle: '+57 321 5549513',
+      handle: '+57 321 554 9513',
       link: 'https://wa.me/573215549513',
       color: 'from-green-500 to-emerald-400',
       icon: (

@@ -43,8 +43,8 @@ export default async function LocaleLayout({
     url: 'https://estrelladorada.asobares.org',
     image: 'https://estrelladorada.asobares.org/images/ESTRELLA DORADA LOGO.png',
     description: 'La distinción más prestigiosa de la industria del entretenimiento nocturno y gastronómico del Eje Cafetero.',
-    startDate: '2026-09-24T19:00:00-05:00',
-    endDate: '2026-09-24T22:00:00-05:00',
+    startDate: '2026-11-19T19:00:00-05:00',
+    endDate: '2026-11-19T22:00:00-05:00',
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {

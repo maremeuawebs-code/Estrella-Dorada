@@ -12,7 +12,7 @@
     "title3": "DORADA",
     "subtitle": "La distinción más prestigiosa de la industria del entretenimiento, la gastronomía y la vida nocturna en el Eje Cafetero de Colombia.",
     "cta": "Explorar Categorías",
-    "date": "24 Sep 2026",
+    "date": "19 Nov 2026",
     "dateLabel": "Fecha",
     "venue": "Fonda La Floresta",
     "venueLabel": "Lugar",
@@ -26,7 +26,7 @@
     "description2": "Un espacio donde los líderes de la industria se reúnen para reconocer a los establecimientos que elevan el estándar de servicio y entretenimiento en Colombia.",
     "metrics": {
       "categories": { "value": "13", "label": "Categorías", "desc": "Cubriendo toda la industria nocturna" },
-      "date": { "value": "Sep 2026", "label": "Fecha de la Gala", "desc": "Una noche de reconocimiento" },
+      "date": { "value": "Nov 2026", "label": "Fecha de la Gala", "desc": "Una noche de reconocimiento" },
       "location": { "value": "Armenia", "label": "Quindío, Colombia", "desc": "Sede oficial del evento" },
       "voting": { "value": "Agosto", "label": "Votación Pública", "desc": "Elección de los ganadores" }
     },
@@ -41,7 +41,7 @@
     "title1": "Un Legado de",
     "title2": "Excelencia",
     "description": "Establecimientos de toda la región compiten por demostrar que la hospitalidad en el Quindío alcanza estándares de clase mundial. Una noche para reconocer el trabajo y la dedicación de toda una industria.",
-    "date": "24 Sep",
+    "date": "19 Nov",
     "dateLabel": "Fecha de la Gala",
     "voting": "Agosto",
     "votingLabel": "Votación Pública"
@@ -54,7 +54,7 @@
     "specs": {
       "organizer": { "label": "Organizador", "value": "Asobares Quindío" },
       "venue": { "label": "Sede", "value": "Fonda La Floresta" },
-      "date": { "label": "Fecha", "value": "24 Sep 2026" }
+      "date": { "label": "Fecha", "value": "19 Nov 2026" }
     },
     "bottomLabel": "Premios Estrella Dorada"
   },
@@ -174,7 +174,7 @@
     "title": "Preguntas Frecuentes",
     "subtitle": "Todo lo que necesitas saber",
     "items": {
-      "q1": { "question": "¿Cuándo y dónde será el evento?", "answer": "La gala de los premios Estrella Dorada se llevará a cabo el 24 de Septiembre de 2026, de 19:00 a 22:00, en Fonda La Floresta (Cra. 6 #29, Armenia, Quindío)." },
+      "q1": { "question": "¿Cuándo y dónde será el evento?", "answer": "La gala de los premios Estrella Dorada se llevará a cabo el 19 de Noviembre de 2026, de 19:00 a 22:00, en Fonda La Floresta (Cra. 6 #29, Armenia, Quindío)." },
       "q2": { "question": "¿Cuál es el código de vestimenta?", "answer": "Vestimenta formal tipo gala con antifaz (Formal - antifaz). Se premiará al mejor antifaz." },
       "q3": { "question": "¿Quiénes pueden ingresar?", "answer": "El evento es para mayores de 18 años. Con entradas previas de los nominados VIP marcadas o enviadas al WhatsApp, deberán mostrarla a la entrada." },
       "q4": { "question": "¿Hay parqueadero disponible?", "answer": "Sí, hay disponibilidad de parqueadero en el sector de Fonda La Floresta." },

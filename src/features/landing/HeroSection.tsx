@@ -63,9 +63,9 @@ export const HeroSection = () => {
           {/* Info bar */}
           <div className="flex flex-wrap gap-8 mt-14 pt-8 border-t border-white/5">
             {[
-              { num: '24 Sep 2026', label: 'Fecha' },
-              { num: 'Fonda La Floresta', label: 'Lugar' },
-              { num: 'Armenia, Quindío', label: 'Ciudad' },
+              { num: t('date'), label: t('dateLabel') },
+              { num: t('venue'), label: t('venueLabel') },
+              { num: t('city'), label: t('cityLabel') },
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="text-xl font-bold text-[#d4af37] font-outfit">{stat.num}</div>

@@ -70,7 +70,7 @@ export const ContactSection = () => {
             </div>
             <p className="text-neutral-500 text-xs uppercase tracking-widest mb-2">WhatsApp</p>
             <p className="text-white font-bold text-lg md:text-xl group-hover:text-green-400 transition-colors duration-200">
-              +57 321 5549513
+              +57 321 554 9513
             </p>
             <span className="mt-6 text-xs text-neutral-600 uppercase tracking-widest group-hover:text-neutral-400 transition-colors duration-200">
               Abrir chat →

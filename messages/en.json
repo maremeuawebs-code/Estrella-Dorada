@@ -12,7 +12,7 @@
     "title3": "AWARDS",
     "subtitle": "The most prestigious distinction in the entertainment, gastronomy, and nightlife industry in Colombia's Coffee Region.",
     "cta": "Explore Categories",
-    "date": "Sep 24, 2026",
+    "date": "Nov 19, 2026",
     "dateLabel": "Date",
     "venue": "Fonda La Floresta",
     "venueLabel": "Venue",
@@ -26,7 +26,7 @@
     "description2": "A space where industry leaders gather to recognize the establishments that raise the standard of service and entertainment in Colombia.",
     "metrics": {
       "categories": { "value": "13", "label": "Categories", "desc": "Covering the entire nightlife industry" },
-      "date": { "value": "Sep 2026", "label": "Gala Date", "desc": "A night of recognition" },
+      "date": { "value": "Nov 2026", "label": "Gala Date", "desc": "A night of recognition" },
       "location": { "value": "Armenia", "label": "Quindío, Colombia", "desc": "Official event venue" },
       "voting": { "value": "August", "label": "Public Voting", "desc": "Selection of the winners" }
     },
@@ -41,7 +41,7 @@
     "title1": "A Legacy of",
     "title2": "Excellence",
     "description": "Establishments from across the region compete to prove that hospitality in Quindío reaches world-class standards. A night to recognize the hard work and dedication of an entire industry.",
-    "date": "Sep 24",
+    "date": "Nov 19",
     "dateLabel": "Gala Date",
     "voting": "August",
     "votingLabel": "Public Voting"
@@ -54,7 +54,7 @@
     "specs": {
       "organizer": { "label": "Organizer", "value": "Asobares Quindío" },
       "venue": { "label": "Venue", "value": "Fonda La Floresta" },
-      "date": { "label": "Date", "value": "Sep 24, 2026" }
+      "date": { "label": "Date", "value": "Nov 19, 2026" }
     },
     "bottomLabel": "Estrella Dorada Awards"
   },
@@ -174,7 +174,7 @@
     "title": "Frequently Asked Questions",
     "subtitle": "Everything you need to know",
     "items": {
-      "q1": { "question": "When and where is the event?", "answer": "The Estrella Dorada Awards gala will take place on September 24, 2026, from 19:00 to 22:00, at Fonda La Floresta (Cra. 6 #29, Armenia, Quindío)." },
+      "q1": { "question": "When and where is the event?", "answer": "The Estrella Dorada Awards gala will take place on November 19, 2026, from 19:00 to 22:00, at Fonda La Floresta (Cra. 6 #29, Armenia, Quindío)." },
       "q2": { "question": "What is the dress code?", "answer": "Formal gala attire with a mask (Formal - mask). The best mask will be awarded." },
       "q3": { "question": "Who can attend?", "answer": "The event is for people over 18 years old. With prior VIP nominee tickets marked or sent via WhatsApp, they must be shown at the entrance." },
       "q4": { "question": "Is parking available?", "answer": "Yes, parking is available in the Fonda La Floresta area." },

@@ -9,12 +9,12 @@ export const Scene3Section = () => {
 
   useEffect(() => {
     let frame: number;
-    let t = 0;
+    let tick = 0;
     const animate = () => {
-      t += 0.008;
+      tick += 0.008;
       if (starRef.current) {
-        const scale = 1 + Math.sin(t) * 0.03;
-        const rotate = Math.sin(t * 0.5) * 3;
+        const scale = 1 + Math.sin(tick) * 0.03;
+        const rotate = Math.sin(tick * 0.5) * 3;
         starRef.current.style.transform = `scale(${scale}) rotate(${rotate}deg)`;
       }
       frame = requestAnimationFrame(animate);
